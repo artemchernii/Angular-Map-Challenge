@@ -16,7 +16,7 @@ https://map-challenge-9beab.firebaseapp.com
 
 ```shell
 git clone https://github.com/artemchernii/Angular-Map-Challenge.git
-cd beyond-skyline-frontend
+cd dir
 ```
 
 ### - Development server
