@@ -15,7 +15,7 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class MapComponent implements OnInit, OnDestroy {
   public spinnerHidden = false;
-  public distanceToStation = 2;
+  public distanceToStation = 5;
   public selectedChargersStatus = 2;
 
   private map: any | undefined;
