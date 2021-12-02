@@ -9,6 +9,14 @@ export class FactoryIcons {
       popupAnchor: [1, -34],
     });
   }
+  public static hiddenStation(): LeafletIcon {
+    return L.icon({
+      iconUrl: 'assets/lightning.png',
+      iconSize: [10, 10],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    });
+  }
   public static redIcon(): LeafletIcon {
     return L.icon({
       iconUrl: 'assets/start.png',

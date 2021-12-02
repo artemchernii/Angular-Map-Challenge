@@ -10,12 +10,21 @@
 
   <!-- Form for change distance to station -->
   <div class="radius__selector">
+    <mat-radio-group
+      class="chargers__options"
+      aria-label="Select an option"
+      [(ngModel)]="selectedChargersStatus"
+      (change)="chargesChange()"
+    >
+      <mat-radio-button [value]="1">All</mat-radio-button>
+      <mat-radio-button [value]="2">Fast Chargers</mat-radio-button>
+    </mat-radio-group>
     <mat-form-field appearance="fill">
       <mat-label>Distance to stations</mat-label>
       <mat-select [(value)]="distanceToStation">
-        <mat-option value="10">10</mat-option>
-        <mat-option value="20">20</mat-option>
-        <mat-option value="50">50</mat-option>
+        <mat-option value="2">2</mat-option>
+        <mat-option value="3">3</mat-option>
+        <mat-option value="5">5</mat-option>
       </mat-select>
     </mat-form-field>
     <button

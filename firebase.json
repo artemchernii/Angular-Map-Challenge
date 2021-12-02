@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/map-challenge",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
