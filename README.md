@@ -1,28 +1,63 @@
-# MapChallenge
+# <b>Map Challenge | Angular + TypeScript</b> 🚀
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
-## Live showcase https://map-challenge-9beab.firebaseapp.com/
+## <b>Live showcase</b> 🏎
 
-## Development server
+<img width="845" alt="view-1" src="https://i.ibb.co/SfM05Cg/Angular-PROJECT.png">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+https://map-challenge-9beab.firebaseapp.com
 
-## Code scaffolding
+<hr/>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## <b>Get started</b>
 
-## Build
+### - Clone the repository
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```shell
+git clone https://github.com/artemchernii/Angular-Map-Challenge.git
+cd beyond-skyline-frontend
+```
 
-## Running unit tests
+### - Development server
+
+- Run ng serve for a dev server.
+
+```shell
+ ng serve
+```
+
+- Navigate to `http://localhost:4200/`.
+- The app will automatically reload if you change any of the source files.
+- Shut it down manually with `Ctrl-C`.
+
+## - Build
+
+Run ng build to build the project.
+
+```shell
+ng build
+```
+
+The build artifacts will be stored in the `dist/` directory.
+
+## - Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+```
+ng test
+```
+
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
+
+```
+ng e2e
+```
+
+- To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 
