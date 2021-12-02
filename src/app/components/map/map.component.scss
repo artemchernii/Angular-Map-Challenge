@@ -50,7 +50,7 @@
     opacity: 1;
     z-index: 999;
     filter: blur(200px);
-    background: linear-gradient(#403b4a, #e7e9bb);
+    background: linear-gradient(#232526, #414345);
     transition: all 1s ease;
     &.hide {
       opacity: 0;
@@ -61,10 +61,10 @@
   // Material spinner
   .spinner {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 999;
+    z-index: 9999;
   }
   // Funny Lewis image
   .lewis__image {
