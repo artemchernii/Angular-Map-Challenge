@@ -4,16 +4,16 @@ export class FactoryIcons {
   public static stationIcon(): LeafletIcon {
     return L.icon({
       iconUrl: 'assets/bolt.png',
-      iconSize: [15, 15],
-      iconAnchor: [12, 41],
+      iconSize: [20, 20],
+      iconAnchor: [12, 37],
       popupAnchor: [1, -34],
     });
   }
   public static hiddenStation(): LeafletIcon {
     return L.icon({
-      iconUrl: 'assets/lightning.png',
-      iconSize: [10, 10],
-      iconAnchor: [12, 41],
+      iconUrl: 'assets/regular.png',
+      iconSize: [13, 13],
+      iconAnchor: [6, 35],
       popupAnchor: [1, -34],
     });
   }

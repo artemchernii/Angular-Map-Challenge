@@ -1,6 +1,38 @@
+// @import url('../../../styles.scss');
+@import '../../../styles.scss';
+
 .wrapper {
   position: relative;
   overflow-y: hidden;
+  .title {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 1rem;
+    left: 0;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.4;
+    z-index: 599;
+    @include md {
+      right: 1em;
+      left: auto;
+      width: 80%;
+      text-align: right;
+      font-size: 2.4rem;
+    }
+    @include sm {
+      top: 0.5em;
+      right: 0.5em;
+      left: auto;
+      width: 80%;
+      text-align: right;
+      font-size: 2rem;
+    }
+  }
   // Map width and height is required for rendering
   #map {
     width: 100%;
@@ -42,6 +74,11 @@
     z-index: 599;
     img {
       width: 300px;
+    }
+    @include sm {
+      img {
+        display: none;
+      }
     }
   }
   // Form for radius change

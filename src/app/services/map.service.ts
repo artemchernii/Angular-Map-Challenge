@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Station } from '../models/station';
+import { Station } from '../models/station.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Coordinate } from '../models/Coordinate';
+import { Coordinate } from '../models/coordinate.model';
 
 @Injectable({
   providedIn: 'root',
@@ -40,19 +40,17 @@ export class MapService {
     const theta = cord1.lon - cord2.lon;
     const radtheta = this.toRad(theta);
 
-    let dist =
+    const notConverted =
       Math.sin(radlat1) * Math.sin(radlat2) +
       Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
 
-    if (dist > 1) {
-      dist = 1;
-    }
+    const distance =
+      ((Math.acos(notConverted > 1 ? 1 : notConverted) * 180) / Math.PI) *
+      60 *
+      1.1515 *
+      1.609344;
+    //convert miles to km
 
-    dist = Math.acos(dist);
-    dist = (dist * 180) / Math.PI;
-    dist = dist * 60 * 1.1515;
-    dist = dist * 1.609344; //convert miles to km
-
-    return dist;
+    return distance;
   }
 }
