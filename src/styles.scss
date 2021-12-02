@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Import leaflet styles */
+@import url(../node_modules/leaflet/dist/leaflet.css);
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+// Hide leaflet routing panel
+.leaflet-control-container .leaflet-routing-container-hide {
+  display: none;
+}
