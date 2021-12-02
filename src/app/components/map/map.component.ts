@@ -5,7 +5,6 @@ import { Subscription } from 'rxjs';
 import { Station } from 'src/app/models/station';
 import { MapService } from 'src/app/services/map.service';
 import { FactoryIcons } from 'src/app/models/FactoryIcons';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-map',
@@ -21,11 +20,10 @@ export class MapComponent implements OnInit, OnDestroy {
     L.latLng(38.736, -9.142685),
     L.latLng(37.2315124677415, -8.628306144673907),
   ];
-  public spinnerHidden = false;
-  public distanceToStation = 10;
-  private markers: any[] = [];
 
-  constructor(private mapService: MapService, private _snackBar: MatSnackBar) {}
+  public spinnerHidden = false;
+
+  constructor(private mapService: MapService) {}
 
   ngOnInit(): void {
     this.stationsSubs = new Subscription();
@@ -61,7 +59,7 @@ export class MapComponent implements OnInit, OnDestroy {
     }
   }
 
-  async initMap() {
+  private initMap() {
     /**
      *  Initilize the map with view and zoom
      */
@@ -147,30 +145,10 @@ export class MapComponent implements OnInit, OnDestroy {
                   `Address: ${this.stations[i].address} <br />Location:${this.stations[i].localization}<br />Socked type: ${this.stations[i].socket_type} <br/> Socket number: ${this.stations[i].socket_number}`
                 )
                 .addTo(this.map);
-              this.markers.push(marker);
             }
           }
         }
       }
     }
-  }
-
-  submitDistanceChange() {
-    // Clear existing markers from map
-    if (this.markers.length > 0) {
-      for (const mark of this.markers) {
-        this.map.removeLayer(mark);
-      }
-      this.markers = [];
-
-      // Add correct amount of markers
-      this.addStationsToMap(this.distanceToStation);
-    }
-
-    this.addStationsToMap(this.distanceToStation);
-    this._snackBar.open(`Distance ${this.distanceToStation}`, 'Success', {
-      horizontalPosition: 'center',
-      verticalPosition: 'bottom',
-    });
   }
 }

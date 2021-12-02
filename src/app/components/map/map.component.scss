@@ -1,6 +1,3 @@
-/* Import global styles */
-@import url(../../../styles.scss);
-
 .wrapper {
   position: relative;
   overflow-y: hidden;
@@ -45,46 +42,6 @@
     z-index: 9999;
     img {
       width: 300px;
-    }
-  }
-  // Form for radius change
-  .radius__selector {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 599;
-    background: rgba(#555, 0.5);
-    padding: 1rem;
-    border-radius: 10px;
-
-    // Custom styling for mat selectors
-    ::ng-deep.mat-form-field-label {
-      /*change color of label*/
-      color: #fff !important;
-    }
-    ::ng-deep.mat-form-field-underline {
-      /*change color of underline*/
-      background-color: green !important;
-    }
-    ::ng-deep.mat-form-field-ripple {
-      /*change color of underline when focused*/
-      background-color: green !important;
-    }
-    ::ng-deep.mat-select-arrow {
-      /*change color of underline when focused*/
-      color: #fff !important;
-    }
-
-    .submit {
-      margin-left: 10px;
-      background: #4caf50;
-      color: #fff;
-      border-radius: 10px;
-      padding: 10px 30px;
-      border: none;
-      &:hover {
-        cursor: pointer;
-      }
     }
   }
 }

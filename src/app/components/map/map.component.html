@@ -8,25 +8,6 @@
   <!-- Starting overlay -->
   <div [ngClass]="{ hide: spinnerHidden }" class="hider"></div>
 
-  <!-- Form for change distance to station -->
-  <div class="radius__selector">
-    <mat-form-field appearance="fill">
-      <mat-label>Distance to stations</mat-label>
-      <mat-select [(value)]="distanceToStation">
-        <mat-option value="10">10</mat-option>
-        <mat-option value="20">20</mat-option>
-        <mat-option value="50">50</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <button
-      class="submit"
-      (click)="submitDistanceChange()"
-      aria-label="Change distance to station"
-    >
-      Change
-    </button>
-  </div>
-
   <!-- Map container -->
   <div id="map"></div>
 
