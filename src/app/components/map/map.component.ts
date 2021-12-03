@@ -73,7 +73,7 @@ export class MapComponent implements OnInit, OnDestroy {
     /**
      *  Initilize the map with view and zoom
      */
-    this.map = L.map('map').setView([38.736, -9.142685], 14);
+    this.map = L.map('map', { tap: false }).setView([38.736, -9.142685], 14);
     /**
      *  Add stadia tiles to the map
      */
